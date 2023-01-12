@@ -23,9 +23,9 @@
                     <div class="header-list fb-10 bggrey d-flex justify-content-between align-items-center">
                         <div class="d-flex align-items-center mt-3">
                             <figure class="my-img-container me-2 ms-2">
-                                <img class="img-fluid" src="img/avatar_io.jpg" alt="/img/avatar_io.jpg">
+                                <img class="img-fluid" :src="myimage" alt="/img/avatar_io.jpg">
                             </figure>
-                            <p></p>
+                            <p>{{data.user.name}}</p>
                         </div>
                         <div class="me-2">
                             <i class="fa-sharp fa-solid fa-circle-notch fa-lg"></i>
@@ -50,7 +50,7 @@
                     <div class="user-list fb-75 bgblue y-scroll bgwhite">
                         <div class="users-container" v-for:="(info,i) in data">
                             <figure class="user-pic-container" >
-                                <img src="img/avatar_1.jpg" alt="img/avatar_1.jpg">
+                                <img :src="" alt="img/avatar_1.jpg">
                                 <p>MIchele</p>
                             </figure>
                         </div>                    
