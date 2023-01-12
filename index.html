@@ -48,7 +48,7 @@
                         <input type="text" placeholder=" &#x1F50D; Cerca o inizia una nuova chat" class="input-search mt-2 ms-3">
                     </div>
                     <div class="user-list fb-75 bgblue y-scroll bgwhite">
-                        <div class="users-container" v-for:="(info,i) in data.contacts">
+                        <div class="users-container" v-for:="(info,i) in data.contacts" @clic="changeChat">
                             <figure class="user-pic-container" >
                                 <img :src="'img/avatar'+ info.avatar +'.jpg'"  alt="img/avatar_1.jpg">
                                 <p>{{info.name}}</p>
@@ -76,12 +76,18 @@
                             <i class="fa-solid fa-ellipsis-vertical fa-lg ms-2"></i>
                         </div>
                     </div>
-                    <div class="fb-80 y-scroll chat-core">
+                    <div class="fb-80 y-scroll chat-core ">
                         <div class="right-bubble">
                             <p class="ms-3 mt-3">Buonasera ragazzi</p>
+                            <p class="right-date">12/01/1994 15:30:55</p>
+                        </div>
+                        <div class="right-bubble">
+                            <p class="ms-3 mt-3">Buonasera ragazzi</p>
+                            <p class="right-date">12/01/1994 15:30:55</p>
                         </div>
                         <div class="left-bubble">
                             <p class="ms-3 mt-3">ohohohohohhohohoh</p>
+                            <p class="left-date">12/01/1994 15:30:55</p>
                         </div>
                     </div>
                     <div class="fb-10 bgwhite d-flex align-items-center justify-content-between footer-chat" >

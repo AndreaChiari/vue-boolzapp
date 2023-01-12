@@ -3,17 +3,15 @@ console.log('vue ok',Vue)
 const app = Vue.createApp({
     data(){
          return{
-            data
-            
+            data,
+            currentindex: 0,
          }
        
     },
-    method:{
-        addName(index) {
-                data.contacts[index].map((info) => {
-                return `'img/avatar' + ${info.name} + '.jpg'`
-              });
-             
+    methods:{
+        changeChat(){
+
+
         }
     },
     computed: {
