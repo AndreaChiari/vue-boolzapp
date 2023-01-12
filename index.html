@@ -50,8 +50,8 @@
                     <div class="user-list fb-75 bgblue y-scroll bgwhite">
                         <div class="users-container" v-for:="(info,i) in data.contacts">
                             <figure class="user-pic-container" >
-                                <img :src="profiles" alt="img/avatar_1.jpg">
-                                <p>MIchele</p>
+                                <img :src="'img/avatar'+ info.avatar +'.jpg'"  alt="img/avatar_1.jpg">
+                                <p>{{info.name}}</p>
                             </figure>
                         </div>                    
                     </div>

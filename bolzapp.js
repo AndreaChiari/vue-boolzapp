@@ -8,19 +8,22 @@ const app = Vue.createApp({
          }
        
     },
-    
+    method:{
+        addName(index) {
+                data.contacts[index].map((info) => {
+                return `'img/avatar' + ${info.name} + '.jpg'`
+              });
+             
+        }
+    },
     computed: {
         myimage:{
             get(){
                 return 'img/avatar' + this.data.user.avatar + '.jpg'
             }
         },
-        profiles:{
-            get(){
-                return 'img/avatar' + this.data.contacts.avatar + '.jpg'
-            }
-        }
     }
+      
 })
 
 
