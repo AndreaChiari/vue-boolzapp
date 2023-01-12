@@ -30,7 +30,9 @@
 .bgwhite{
     background-color: white;
 }
-
+.colorgrey{
+    color: grey;
+}
 
 /* main layout*/
 
@@ -57,6 +59,7 @@
 .list{
     
     flex-basis: 35%;
+    border-right:2px solid blue;
 }
 
 .user{
@@ -76,7 +79,7 @@
     border-radius: 50%;
 }
 
-.fa-solid,.fa-sharp{
+.fa-solid,.fa-sharp,.fa-regular{
     text-size-adjust: 20%;
     cursor: pointer;
     color: grey;
@@ -141,4 +144,41 @@
 
 .chat-core{
     background-image: url(img/mine.jpg);
+}
+
+.chat-pic{
+    width: 60px;
+    height: 60px;
+    padding-top: 10px;
+    margin-left:10px;
+}
+
+.chat-pic > img{
+    object-fit: contain;
+    border-radius: 50%;
+    max-width: 100%;
+    height: auto;
+}
+
+.header-chat-container{
+    position: relative;
+}
+
+.name-header-chat{
+    position:absolute;
+    top:15px;
+}
+.last-acess-text{
+    position:absolute;
+    top:45px;
+    width: 200px;
+}
+.footer-chat i{
+    font-size: 150%;
+}
+
+.footer-chat input{
+    width: 650px;
+    height: 50px;
+    border: none;
 }
