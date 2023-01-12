@@ -1,0 +1,66 @@
+/* utilities */
+
+.fb-10{
+    flex-basis: 10%;
+}
+.fb-5{
+    flex-basis: 5%;
+}
+.fb-75{
+    flex-basis: 75%;
+}
+
+/* colors */
+
+.bgred{
+    background-color: red;
+}
+.bggreen{
+    background-color: green;
+}
+.bgblue{
+    background-color: blue;
+}
+
+
+/* main layout*/
+
+.main-bg{
+   max-width: 200vh;
+   min-height: 100vh;
+   background:linear-gradient(to top, #DBDBD4 50%, #DBDBD4 85%, #009688 85%);
+   position: relative;
+   
+}
+
+.macro-layout{
+    width: 1200px;
+    height: 850px;
+    padding-top: 10px;
+    position: absolute;
+    top: 5%;
+    left: 350px;
+}
+    
+
+/* left user list */
+
+.list{
+    background-color: blue;
+    flex-basis: 35%;
+}
+
+.user-list{
+overflow-y: scroll;
+}
+
+.user{
+    height: 100px;
+    width: 100%;
+}
+
+
+.chat{
+    background-color: green;
+    flex-basis: 65%;
+}
