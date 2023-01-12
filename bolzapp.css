@@ -59,7 +59,7 @@
 .list{
     
     flex-basis: 35%;
-    border-right:2px solid blue;
+    border-right:1px solid black;
 }
 
 .user{
@@ -181,4 +181,30 @@
     width: 650px;
     height: 50px;
     border: none;
+}
+
+/* bubble chat */
+
+.chat-core{
+    position: relative;
+}
+
+.right-bubble{
+    width: 250px;
+    height: 60px;
+    position: absolute;
+    background: rgb(213,249,186);
+    border-radius:8px ;
+    top: 30px;
+    right: 70px;
+}
+
+.left-bubble{
+    width: 250px;
+    height: 60px;
+    position: absolute;
+    background: white;
+    border-radius:8px ;
+    top: 100px;
+    left: 70px;
 }
