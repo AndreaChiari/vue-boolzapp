@@ -19,21 +19,49 @@
                  <!-- left user list -->
 
                 <div class="list d-flex flex-column">
-                    <div class="header-list fb-10 bgred"></div>
-                    <div class="notify fb-10 bgblue"></div>
-                    <div class="searchbar fb-5 bgred"></div>
-                    <div class="user-list fb-75 bgblue y-scroll">
-                        <div class="user bgred">
-
+                    <div class="header-list fb-10 bggrey d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center mt-3">
+                            <figure class="my-img-container me-2 ms-2">
+                                <img class="img-fluid" src="img/avatar_io.jpg" alt="/img/avatar_io.jpg">
+                            </figure>
+                            <p>Nome Utente</p>
                         </div>
-                        
+                        <div class="me-2">
+                            <i class="fa-sharp fa-solid fa-circle-notch fa-lg"></i>
+                            <i class="fa-solid fa-message fa-lg ms-2"></i>
+                            <i class="fa-solid fa-ellipsis-vertical fa-lg ms-2"></i>
+                        </div>
+                    </div>
+                    <div class="notify fb-10 bgazure">
+                        <div class="d-flex">
+                            <div class="pic-notify-container bgwhite d-flex justify-content-center align-items-center ms-3 mt-3">
+                                <i class="fa-solid fa-bell-slash"></i>
+                            </div>
+                            <div class="d-flex flex-column text-notify mt-3 ms-2">
+                                <p> Ricevi notifiche di nuovi messaggi </p>
+                                <p class="notify-text-on">Attva notifiche desktop</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="searchbar fb-5 bgwhite">
+                        <input type="text" placeholder=" &#x1F50D; Cerca o inizia una nuova chat" class="input-search mt-2 ms-3">
+                    </div>
+                    <div class="user-list fb-75 bgblue y-scroll bgwhite">
+                        <div class="users-container">
+                            <figure class="user-pic-container">
+                                <img src="img/avatar_1.jpg" alt="img/avatar_1.jpg">
+                                <p>MIchele</p>
+                            </figure>
+                        </div>                    
                     </div>
                 </div>
 
                 <!-- chat -->
 
                 <div class="chat d-flex flex-column">
-                    <div class="fb-10 bggreen"></div>
+                    <div class="fb-10 bggreen">
+                        
+                    </div>
                     <div class="fb-80 y-scroll chat-core">
                         
                     </div>
@@ -44,3 +72,5 @@
     </main>
 </body>
 </html>
+
+

@@ -21,11 +21,14 @@
 .bgred{
     background-color: red;
 }
-.bggreen{
-    background-color: green;
+.bgazure{
+    background-color: rgb(142,218,252);
 }
-.bgblue{
-    background-color: blue;
+.bggrey{
+    background-color: rgb(234,234,234);
+}
+.bgwhite{
+    background-color: white;
 }
 
 
@@ -52,13 +55,81 @@
 /* left user list */
 
 .list{
-    background-color: blue;
+    
     flex-basis: 35%;
 }
 
 .user{
     height: 100px;
     width: 100%;
+}
+.users-container{
+    height: 100px;
+}
+.my-img-container,.pic-notify-container{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.my-img-container img {
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.fa-solid,.fa-sharp{
+    text-size-adjust: 20%;
+    cursor: pointer;
+    color: grey;
+}
+
+.fa-bell-slash{
+    font-size: 150%;
+    color:rgb(142,218,252);
+}
+
+.text-notify p{
+    margin-bottom: 0;
+}
+.notify-text-on{
+    color: grey;
+    text-decoration: underline;
+    
+}
+.searchbar{
+    background-color: white;
+}
+.input-search{
+    width: 400px;
+    border: none;
+    background: white;
+}
+
+/* lista utenti */
+
+.users-container{
+    background-color: white;
+}
+.users-container > figure{
+    width: 80px;
+    height: 80px;
+    padding-top: 10px;
+    margin-left:10px;
+    position: relative;
+}
+.users-container > figure > img{
+    object-fit: contain;
+    border-radius: 50%;
+    max-width: 100%;
+    height: auto;
+}
+.users-container > figure > p{
+    position: absolute;
+    top:10px;
+    left:100px;
+}
+.users-container:hover{
+    background-color:rgb(234,234,234);
+    cursor: pointer;
 }
 
 /* chat */
