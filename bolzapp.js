@@ -15,7 +15,11 @@ const app = Vue.createApp({
                 return 'img/avatar' + this.data.user.avatar + '.jpg'
             }
         },
-        
+        profiles:{
+            get(){
+                return 'img/avatar' + this.data.contacts.avatar + '.jpg'
+            }
+        }
     }
 })
 
