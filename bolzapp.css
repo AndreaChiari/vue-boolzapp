@@ -9,7 +9,13 @@
 .fb-75{
     flex-basis: 75%;
 }
+.fb-80{
+    flex-basis: 80%;
+}
 
+.y-scroll{
+    overflow-y: scroll;
+}
 /* colors */
 
 .bgred{
@@ -50,17 +56,18 @@
     flex-basis: 35%;
 }
 
-.user-list{
-overflow-y: scroll;
-}
-
 .user{
     height: 100px;
     width: 100%;
 }
 
+/* chat */
 
 .chat{
     background-color: green;
     flex-basis: 65%;
+}
+
+.chat-core{
+    background-image: url(img/mine.jpg);
 }
