@@ -185,6 +185,17 @@
 
 /* bubble chat */
 
+/* position utilities */
+.t-100{
+    top: 100px;
+}
+.t-140{
+    top:140px
+}
+.t-180{
+    top: 180px;
+}
+
 .chat-core{
     position: relative;
 }
@@ -194,8 +205,7 @@
     height: 60px;
     position: absolute;
     background: rgb(213,249,186);
-    border-radius:8px ;
-    top: 30px;
+    border-radius:8px; 
     right: 70px;
 }
 .right-date{
@@ -212,7 +222,6 @@
     position: absolute;
     background: white;
     border-radius:8px ;
-    top: 100px;
     left: 70px;
 }
 
@@ -222,4 +231,8 @@
     left: 135px;
     font-size: 12px;
     color: grey;
+}
+
+.d-none{
+    display: none;
 }

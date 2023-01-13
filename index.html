@@ -63,10 +63,10 @@
                     <div class="fb-10 bggrey d-flex justify-content-between align-items-center">
                         <div class="d-flex">
                             <figure class="chat-pic">
-                                <img src="img/avatar_1.jpg" alt="img/avatar_1.jpg">
+                                <img src="'img/avatar'+ data.contacts[0].avatar +'jpg'" alt="data.contacts[0].name">
                             </figure>
                             <div class="d-flex flex-column ms-2 justify-content-center header-chat-container">
-                                <p class="name-header-chat"> Michele</p>
+                                <p class="name-header-chat"> {{data.contacts[0].name}}</p>
                                 <p class="colorgrey last-acess-text">Ultimo accesso oggi alle</p>
                             </div>
                         </div>
@@ -76,16 +76,54 @@
                             <i class="fa-solid fa-ellipsis-vertical fa-lg ms-2"></i>
                         </div>
                     </div>
-                    <div class="fb-80 y-scroll chat-core ">
+                    <div class="fb-80 y-scroll chat-core pt-4">
+                        <div class="right-bubble">
+                            <p class="ms-3 mt-3"></p>
+                            <p class="right-date">12/01/1994 15:30:55</p>
+                        </div>
+                        <div class="right-bubble t-100">
+                            <p class="ms-3 mt-3">Buonasera ragazzi</p>
+                            <p class="right-date">12/01/1994 15:30:55</p>
+                        </div>
+                        <div class="left-bubble t-180">
+                            <p class="ms-3 mt-3">ohohohohohhohohoh</p>
+                            <p class="left-date">12/01/1994 15:30:55</p>
+                        </div>
+                    </div>
+                    <div class="fb-80 y-scroll chat-core pt-4 d-none">
                         <div class="right-bubble">
                             <p class="ms-3 mt-3">Buonasera ragazzi</p>
                             <p class="right-date">12/01/1994 15:30:55</p>
                         </div>
-                        <div class="right-bubble">
+                        <div class="left-bubble t-100">
+                            <p class="ms-3 mt-3">ohohohohohhohohoh</p>
+                            <p class="left-date">12/01/1994 15:30:55</p>
+                        </div>
+                        <div class="right-bubble t-180">
                             <p class="ms-3 mt-3">Buonasera ragazzi</p>
                             <p class="right-date">12/01/1994 15:30:55</p>
                         </div>
+                    </div>
+                    <div class="fb-80 y-scroll chat-core pt-4 d-none">
                         <div class="left-bubble">
+                            <p class="ms-3 mt-3">ohohohohohhohohoh</p>
+                            <p class="left-date">12/01/1994 15:30:55</p>
+                        </div>
+                        <div class="right-bubble t-100">
+                            <p class="ms-3 mt-3">Buonasera ragazzi</p>
+                            <p class="right-date">12/01/1994 15:30:55</p>
+                        </div>
+                        <div class="left-bubble t-180">
+                            <p class="ms-3 mt-3">ohohohohohhohohoh</p>
+                            <p class="left-date">12/01/1994 15:30:55</p>
+                        </div>
+                    </div>
+                    <div class="fb-80 y-scroll chat-core pt-4 d-none">
+                        <div class="right-bubble">
+                            <p class="ms-3 mt-3">Buonasera ragazzi</p>
+                            <p class="right-date">12/01/1994 15:30:55</p>
+                        </div>
+                        <div class="left-bubble t-100">
                             <p class="ms-3 mt-3">ohohohohohhohohoh</p>
                             <p class="left-date">12/01/1994 15:30:55</p>
                         </div>

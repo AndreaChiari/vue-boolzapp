@@ -5,14 +5,12 @@ const app = Vue.createApp({
          return{
             data,
             currentindex: 0,
+         
          }
        
     },
     methods:{
-        changeChat(){
-
-
-        }
+        
     },
     computed: {
         myimage:{
