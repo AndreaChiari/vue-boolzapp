@@ -186,27 +186,19 @@
 /* bubble chat */
 
 /* position utilities */
-.t-100{
-    top: 100px;
-}
-.t-140{
-    top:140px
-}
-.t-180{
-    top: 180px;
-}
 
-.chat-core{
-    position: relative;
+.send{
+    display: flex;
+    justify-content: end;
+    width: 100%;
 }
 
 .right-bubble{
     width: 250px;
     height: 60px;
-    position: absolute;
     background: rgb(213,249,186);
     border-radius:8px; 
-    right: 70px;
+    position: relative;
 }
 .right-date{
     position: absolute;
@@ -216,13 +208,18 @@
     color: grey;
 }
 
+.received{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+
+}
 .left-bubble{
     width: 250px;
     height: 60px;
-    position: absolute;
     background: white;
-    border-radius:8px ;
-    left: 70px;
+    border-radius:8px;
+    position: relative;
 }
 
 .left-date{
@@ -231,8 +228,4 @@
     left: 135px;
     font-size: 12px;
     color: grey;
-}
-
-.d-none{
-    display: none;
 }

@@ -25,7 +25,7 @@
                             <figure class="my-img-container me-2 ms-2">
                                 <img class="img-fluid" :src="myimage" alt="/img/avatar_io.jpg">
                             </figure>
-                            <p>{{data.user.name}}</p>
+                            <p>{{user.name}}</p>
                         </div>
                         <div class="me-2">
                             <i class="fa-sharp fa-solid fa-circle-notch fa-lg"></i>
@@ -48,9 +48,9 @@
                         <input type="text" placeholder=" &#x1F50D; Cerca o inizia una nuova chat" class="input-search mt-2 ms-3">
                     </div>
                     <div class="user-list fb-75 bgblue y-scroll bgwhite">
-                        <div class="users-container" v-for:="(info,i) in data.contacts" @clic="changeChat">
+                        <div class="users-container" v-for:="(info,i) in contacts" @click="changeIndex(i)">
                             <figure class="user-pic-container" >
-                                <img :src="'img/avatar'+ info.avatar +'.jpg'"  alt="img/avatar_1.jpg">
+                                <img :src="`img/avatar${info.avatar}.jpg`" :alt="info.name">
                                 <p>{{info.name}}</p>
                             </figure>
                         </div>                    
@@ -63,10 +63,10 @@
                     <div class="fb-10 bggrey d-flex justify-content-between align-items-center">
                         <div class="d-flex">
                             <figure class="chat-pic">
-                                <img src="'img/avatar'+ data.contacts[0].avatar +'jpg'" alt="data.contacts[0].name">
+                                <img :src="'img/avatar'+ currentContact.avatar + '.jpg'" alt="currentContact.name">
                             </figure>
                             <div class="d-flex flex-column ms-2 justify-content-center header-chat-container">
-                                <p class="name-header-chat"> {{data.contacts[0].name}}</p>
+                                <p class="name-header-chat"> {{currentContact.name}}</p>
                                 <p class="colorgrey last-acess-text">Ultimo accesso oggi alle</p>
                             </div>
                         </div>
@@ -76,57 +76,19 @@
                             <i class="fa-solid fa-ellipsis-vertical fa-lg ms-2"></i>
                         </div>
                     </div>
-                    <div class="fb-80 y-scroll chat-core pt-4">
-                        <div class="right-bubble">
-                            <p class="ms-3 mt-3"></p>
-                            <p class="right-date">12/01/1994 15:30:55</p>
+                    <div class="fb-80 y-scroll chat-core pt-4 d-flex flex-column">
+                        <div class="send pe-3">
+                            <div class="right-bubble">
+                                <p class="ms-3 mt-1">{{currentContact.messages[currentindex].text}}</p>
+                                <p class="right-date">12/01/1994 15:30:55</p>
+                            </div>
                         </div>
-                        <div class="right-bubble t-100">
-                            <p class="ms-3 mt-3">Buonasera ragazzi</p>
-                            <p class="right-date">12/01/1994 15:30:55</p>
-                        </div>
-                        <div class="left-bubble t-180">
-                            <p class="ms-3 mt-3">ohohohohohhohohoh</p>
-                            <p class="left-date">12/01/1994 15:30:55</p>
-                        </div>
-                    </div>
-                    <div class="fb-80 y-scroll chat-core pt-4 d-none">
-                        <div class="right-bubble">
-                            <p class="ms-3 mt-3">Buonasera ragazzi</p>
-                            <p class="right-date">12/01/1994 15:30:55</p>
-                        </div>
-                        <div class="left-bubble t-100">
-                            <p class="ms-3 mt-3">ohohohohohhohohoh</p>
-                            <p class="left-date">12/01/1994 15:30:55</p>
-                        </div>
-                        <div class="right-bubble t-180">
-                            <p class="ms-3 mt-3">Buonasera ragazzi</p>
-                            <p class="right-date">12/01/1994 15:30:55</p>
-                        </div>
-                    </div>
-                    <div class="fb-80 y-scroll chat-core pt-4 d-none">
-                        <div class="left-bubble">
-                            <p class="ms-3 mt-3">ohohohohohhohohoh</p>
-                            <p class="left-date">12/01/1994 15:30:55</p>
-                        </div>
-                        <div class="right-bubble t-100">
-                            <p class="ms-3 mt-3">Buonasera ragazzi</p>
-                            <p class="right-date">12/01/1994 15:30:55</p>
-                        </div>
-                        <div class="left-bubble t-180">
-                            <p class="ms-3 mt-3">ohohohohohhohohoh</p>
-                            <p class="left-date">12/01/1994 15:30:55</p>
-                        </div>
-                    </div>
-                    <div class="fb-80 y-scroll chat-core pt-4 d-none">
-                        <div class="right-bubble">
-                            <p class="ms-3 mt-3">Buonasera ragazzi</p>
-                            <p class="right-date">12/01/1994 15:30:55</p>
-                        </div>
-                        <div class="left-bubble t-100">
-                            <p class="ms-3 mt-3">ohohohohohhohohoh</p>
-                            <p class="left-date">12/01/1994 15:30:55</p>
-                        </div>
+                        <div class="received ps-3">  
+                            <div class="left-bubble t-180">
+                                <p class="ms-3 mt-1">ohohohohohhohohoh</p>
+                                <p class="left-date">12/01/1994 15:30:55</p>
+                            </div>
+                        </div>  
                     </div>
                     <div class="fb-10 bgwhite d-flex align-items-center justify-content-between footer-chat" >
                         <i class="fa-regular fa-face-smile ms-3"></i>
