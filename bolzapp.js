@@ -3,6 +3,7 @@ console.log('vue ok',Vue)
 const app = Vue.createApp({
     data(){
          return{
+            newChat: '',
             currentindex: 0,
             user: {
                 name: 'Nome Utente',
@@ -96,7 +97,10 @@ const app = Vue.createApp({
         changeIndex(index){
             this.currentindex = index;
 
-        }
+        },
+        
+
+
     },
     computed: {
         myimage:{
@@ -106,7 +110,9 @@ const app = Vue.createApp({
         },
         currentContact(){
             return this.contacts[this.currentindex];
-        }
+        },
+
+
     }
       
 })

@@ -76,9 +76,9 @@
                             <i class="fa-solid fa-ellipsis-vertical fa-lg ms-2"></i>
                         </div>
                     </div>
-                    <div class="fb-80 y-scroll chat-core pt-4 d-flex flex-column">
-                        <div v-for:="(message,i) in contacts[currentindex].messages" :class= "message.status === 'sent' ? 'send right-bubble' : 'received left-bubble' ">
-                            <div>
+                    <div class="fb-80 y-scroll chat-core pt-4 d-flex flex-column" >
+                        <div v-for:="(message,i) in contacts[currentindex].messages" :class= "message.status === 'sent' ? 'send ' : 'received'">
+                            <div class="right-bubble">
                                 <p class="ms-3 mt-1">{{message.text}}</p>
                                 <p class="right-date">12/01/1994 15:30:55</p>
                             </div>
@@ -86,7 +86,7 @@
                     </div>
                     <div class="fb-10 bgwhite d-flex align-items-center justify-content-between footer-chat" >
                         <i class="fa-regular fa-face-smile ms-3"></i>
-                        <input type="text" placeholder="Scrivi un messaggio">
+                        <input type="text" placeholder="Scrivi un messaggio" v-model="newChat">
                         <i class="fa-solid fa-microphone me-3"></i>
                     </div>
                 </div>

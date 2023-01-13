@@ -191,7 +191,6 @@
     display: flex;
     justify-content: end;
     width: 100%;
-    
 }
 
 .right-bubble{
@@ -201,8 +200,9 @@
     border-radius:8px; 
     position: relative;
     margin-bottom: 10px;
-    
+    margin-right: 10px;
 }
+
 .right-date{
     position: absolute;
     top: 40px;
@@ -215,11 +215,8 @@
     display: flex;
     justify-content: start;
     width: 100%;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    
-
 }
+
 .left-bubble{
     width: 250px;
     height: 60px;
@@ -227,7 +224,7 @@
     border-radius:8px;
     position: relative;
     margin-bottom: 10px;
-   
+    margin-left:10px;
 }
 
 .left-date{
