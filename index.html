@@ -77,9 +77,9 @@
                         </div>
                     </div>
                     <div class="fb-80 y-scroll chat-core pt-4 d-flex flex-column">
-                        <div v-for:="(chat,i) in contacts">
-                            <div class="right-bubble">
-                                <p class="ms-3 mt-1">{{contacts[currentindex].messages[1].text}}</p>
+                        <div v-for:="(message,i) in contacts[currentindex].messages" :class= "message.status === 'sent' ? 'send right-bubble' : 'received left-bubble' ">
+                            <div>
+                                <p class="ms-3 mt-1">{{message.text}}</p>
                                 <p class="right-date">12/01/1994 15:30:55</p>
                             </div>
                         </div>  
