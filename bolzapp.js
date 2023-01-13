@@ -96,26 +96,35 @@ const app = Vue.createApp({
     methods:{
         changeIndex(index){
             this.currentindex = index;
-
         },
+        sendMessage(){
+            this.contacts[this.currentindex].messages.push({date:'2',text: this.newChat, status:'sent'})
+            setTimeout(()=>{
+                const chat = {
+                    date:'2',text: 'Ok', status:'received'
+                }
+                this.contacts[this.currentindex].messages.push(chat);
+                
+            },2000)
+
+        }},
+        computed: {
+            myimage:{
+                get(){
+                    return 'img/avatar' + this.user.avatar + '.jpg'
+                }
+            },
+            currentContact(){
+                return this.contacts[this.currentindex];
+            },
+    
+        }})
+    
+        
+    
+    
+    app.mount('#root')
+           
+        
         
 
-
-    },
-    computed: {
-        myimage:{
-            get(){
-                return 'img/avatar' + this.user.avatar + '.jpg'
-            }
-        },
-        currentContact(){
-            return this.contacts[this.currentindex];
-        },
-
-
-    }
-      
-})
-
-
-app.mount('#root')
