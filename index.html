@@ -77,16 +77,10 @@
                         </div>
                     </div>
                     <div class="fb-80 y-scroll chat-core pt-4 d-flex flex-column">
-                        <div class="send pe-3">
+                        <div v-for:="(chat,i) in contacts">
                             <div class="right-bubble">
-                                <p class="ms-3 mt-1">{{currentContact.messages[currentindex].text}}</p>
+                                <p class="ms-3 mt-1">{{contacts[currentindex].messages[1].text}}</p>
                                 <p class="right-date">12/01/1994 15:30:55</p>
-                            </div>
-                        </div>
-                        <div class="received ps-3">  
-                            <div class="left-bubble t-180">
-                                <p class="ms-3 mt-1">ohohohohohhohohoh</p>
-                                <p class="left-date">12/01/1994 15:30:55</p>
                             </div>
                         </div>  
                     </div>
