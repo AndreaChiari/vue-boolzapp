@@ -1,5 +1,6 @@
 console.log('vue ok',Vue)
 
+const dt = luxon.DateTime;
 const app = Vue.createApp({
     data(){
          return{
@@ -97,17 +98,24 @@ const app = Vue.createApp({
         changeIndex(index){
             this.currentindex = index;
         },
+
         sendMessage(){
-            this.contacts[this.currentindex].messages.push({date:'2',text: this.newChat, status:'sent'})
+            this.contacts[this.currentindex].messages.push({date: this.getNow(), text: this.newChat, status:'sent'})
             setTimeout(()=>{
                 const chat = {
-                    date:'2',text: 'Ok', status:'received'
+                    date: this.getNow(),text: 'Ok', status:'received'
                 }
                 this.contacts[this.currentindex].messages.push(chat);
                 
             },2000)
+            },
 
-        }},
+        getNow(){
+            return dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS)
+        }
+    
+    
+    },
         computed: {
             myimage:{
                 get(){

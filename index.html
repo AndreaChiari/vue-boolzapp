@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="bolzapp.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="data_milestone1.js"> </script>
     <script defer src="bolzapp.js"></script>
@@ -80,7 +81,7 @@
                         <div v-for:="(message,i) in contacts[currentindex].messages" :class= "message.status === 'sent' ? 'send' : 'received'">
                             <div :class= "message.status === 'sent' ? 'right-bubble' : 'left-bubble'">
                                 <p class="ms-3 mt-1">{{message.text}}</p>
-                                <p class="right-date">12/01/1994 15:30:55</p>
+                                <p class="right-date">{{message.date}}</p>
                             </div>
                         </div>  
                     </div>
