@@ -51,7 +51,7 @@
                     <div class="user-list fb-75 bgblue y-scroll bgwhite">
                         <div class="users-container" v-for:="(info,i) in filterUsers" @click="changeIndex(i)">
                             <figure class="user-pic-container" >
-                                <img :src="`img/avatar${info.avatar}.jpg`" :alt="info.name">
+                                <img :src="`img/avatar${info.avatar}.jpg`":alt="info.name">
                                 <p>{{info.name}}</p>
                             </figure>
                         </div>                    

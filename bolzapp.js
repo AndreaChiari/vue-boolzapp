@@ -8,8 +8,8 @@ const app = Vue.createApp({
             filterWord: '',
             currentindex: 0,
             user: {
-                name: 'Nome Utente',
-                avatar: '_io'
+                name: 'Andrea',
+                avatar: '_7'
               },
               contacts: [
                 {
@@ -125,7 +125,8 @@ const app = Vue.createApp({
                 return this.contacts[this.currentindex];
             },
             filterUsers(){
-              return this.contacts.filter(user => user.name.includes(this.filterWord)) 
+              
+              return this.contacts.filter(user => user.name.toLowerCase().includes(this.filterWord)) 
               }
 
             
