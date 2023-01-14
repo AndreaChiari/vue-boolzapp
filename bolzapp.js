@@ -5,6 +5,7 @@ const app = Vue.createApp({
     data(){
          return{
             newChat: '',
+            filterWord: '',
             currentindex: 0,
             user: {
                 name: 'Nome Utente',
@@ -112,10 +113,8 @@ const app = Vue.createApp({
 
         getNow(){
             return dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS)
-        }
-    
-    
-    },
+        },
+      },
         computed: {
             myimage:{
                 get(){
@@ -125,8 +124,14 @@ const app = Vue.createApp({
             currentContact(){
                 return this.contacts[this.currentindex];
             },
-    
-        }})
+            filterUsers(){
+              return this.contacts.filter(user => user.name.includes(this.filterWord)) 
+              }
+
+            
+        
+      
+      }})
     
         
     

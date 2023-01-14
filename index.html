@@ -46,10 +46,10 @@
                         </div>
                     </div>
                     <div class="searchbar fb-5 bgwhite">
-                        <input type="text" placeholder=" &#x1F50D; Cerca o inizia una nuova chat" class="input-search mt-2 ms-3">
+                        <input type="text" placeholder=" &#x1F50D; Cerca o inizia una nuova chat" class="input-search mt-2 ms-3" v-model="filterWord" @keyup.enter="filterWord">
                     </div>
                     <div class="user-list fb-75 bgblue y-scroll bgwhite">
-                        <div class="users-container" v-for:="(info,i) in contacts" @click="changeIndex(i)">
+                        <div class="users-container" v-for:="(info,i) in filterUsers" @click="changeIndex(i)">
                             <figure class="user-pic-container" >
                                 <img :src="`img/avatar${info.avatar}.jpg`" :alt="info.name">
                                 <p>{{info.name}}</p>
