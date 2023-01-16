@@ -114,13 +114,8 @@ const app = Vue.createApp({
         getNow(){
             return dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS)
         },
-        
-        filterUsers(){
-          
-          return this.contacts.forEach(user => user.visible.toLowerCase().includes(this.filterWord)) 
-          }
       },
-      computed: {
+        computed: {
             myimage:{
                 get(){
                     return 'img/avatar' + this.user.avatar + '.jpg'
@@ -129,11 +124,15 @@ const app = Vue.createApp({
             currentContact(){
                 return this.contacts[this.currentindex];
             },
-            }})
+            filterUsers(){
+              
+              return this.contacts.filter(user => user.name.toLowerCase().includes(this.filterWord)) 
+              }
 
             
         
       
+      }})
     
         
     
